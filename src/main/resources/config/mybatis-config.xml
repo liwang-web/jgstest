@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--以日志方式运行-->
+        <setting name="logImpl" value="LOG4J"/>
+        <!--
+映射级别：autoMappingBehavior
+禁止匹配：NONE
+自动匹配所有属性：PARTIAL 内部嵌套除外
+自动匹配所有 ：FULL
+-->
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
+    </settings>
+
+    <!--设置别名-->
+    <typeAliases>
+        <package name="cn.kgc.ssm.bean"></package>
+    </typeAliases>
+    <!--分页插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+</configuration>
